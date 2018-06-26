@@ -9,7 +9,7 @@ app.listen(3000, function () {
 });
 
 // Mount middleware.
-app.use.get([
+app.use.get.get([
     // Contains all of the routes.
     require('./lib/routes')
 ]);
