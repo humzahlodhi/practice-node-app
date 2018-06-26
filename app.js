@@ -1,29 +1,19 @@
-/*
-const express = require('express')
-const app = express()
-
-app.get('/', (req, res) => res.send('Hello World!'))
-
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
-*/
-
-// NOTE - Why are we using const instead of var
 const express = require('express');
-
 const app = express();
-const jwt = require('jsonwebtoken');
+//const jwt = require('jsonwebtoken');
 
-// Mount middleware.
-app.use([
-    // Contains all of the routes.
-    require('./lib/routes')
-]);
 
 // Turns on node server
 app.listen(3000, function () {
   console.log('Node app listening on port 3000!');
 });
 
+// Mount middleware.
+app.use([
+    // Contains all of the routes.
+    require('./lib/routes')
+]);
+/*
 app.get('/api', (req, res) => {
   res.json({
     message: 'Welcome to the API'
@@ -79,5 +69,6 @@ if (typeof bearerHeader !== 'undefined') {
   //Forbidden
   res.sendStatus(403);
 }
-
+function wordWide (enter) {
 }
+*/
